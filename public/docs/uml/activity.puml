@@ -1,0 +1,29 @@
+@startuml
+start
+
+:User opens website;
+
+:Enter credentials;
+:Send to Login.php;
+
+if (Valid login?) then (Yes)
+  :Go to color page;
+else (No)
+  :Show error message;
+  stop
+endif
+
+if (Search colors?) then (Yes)
+  :Enter search term;
+  :Send request to SearchColors.php;
+  :Query database;
+  :Display results;
+else (Add color)
+  :Enter color info;
+  :Send to AddColor.php;
+  :Save color to database;
+  :Show success message;
+endif
+
+stop
+@enduml
