@@ -1,0 +1,43 @@
+@startuml
+top to bottom direction
+
+class Login {
+  + login()
+}
+
+class AddColor {
+  + addColor()
+}
+
+class SearchColors {
+  + searchColors()
+}
+
+class Database {
+  + connect()
+  + findUser()
+  + insertColor()
+  + searchColor()
+}
+
+class User {
+  id
+  firstName
+  lastName
+}
+
+class Color {
+  name
+  userId
+}
+
+Login --> Database
+AddColor --> Database
+SearchColors --> Database
+
+Database --> User
+Database --> Color
+
+User "1" --> "0..*" Color
+
+@enduml
