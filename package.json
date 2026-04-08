@@ -4,7 +4,7 @@
   "description": "\\# COLORS LAMP Application",
   "main": "index.js",
 "scripts": {
-  "lint": "npm exec eslint \"public/**/*.js\" && npm exec stylelint \"public/**/*.css\" && npm exec htmlhint \"public/**/*.html\""
+  "lint": "eslint \"public/**/*.js\" && stylelint \"public/**/*.css\" && htmlhint \"public/**/*.html\""
 },
   "repository": {
     "type": "git",

@@ -16,4 +16,8 @@ jobs:
           node-version: 18
 
       - run: npm install
+
+      - name: Fix executable permissions
+        run: chmod +x node_modules/.bin/eslint node_modules/.bin/stylelint node_modules/.bin/htmlhint
+
       - run: npm run lint
